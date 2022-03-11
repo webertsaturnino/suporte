@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>inst-acesso-info-sistema-windows.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="acessando-as-configurações-completas-de-hardware-e-software-do-sistema-operacional-windows-vista781011server">Acessando as configurações completas de hardware e software do sistema operacional Windows Vista/7/8/10/11/Server</h1>
+<p>Para acesso às informações do sistema incluindo os componentes físicos, aplicações e demais <em>software</em> utilizaremos a ferramenta <em><strong>Intel® System Support Utility for Windows</strong></em>, que permite a geração de um relatório completo das configurações da máquina.</p>
+<h2 id="baixar-o-issu-e-executar-a-análise">Baixar o ISSU e executar a análise</h2>
+<ol>
+<li>
+<p>Acesse o <a href="https://github.com/webertsaturnino/tutoriais/raw/main/acesso-config-sistemas/apps/intel-ssu-windows.exe">link</a>  e baixe o arquivo <em><strong>intel-ssu-windows.exe</strong></em>;</p>
+</li>
+<li>
+<p>Execute o arquivo arquivo baixado (<em><strong>intel-ssu-windows.exe</strong></em>). Caso surja  um diálogo do sistema com a mensagem “Deseja permitir que este aplicativo faça alterações no seu dispositivo?”, clique em “Sim”. Será aberta a janela do ***Intel® System Support Utility (ISSU)***. Marque a caixa de seleção <em><strong>Everything</strong></em> e depois no botão “<em><strong>Scan</strong></em>”.</p>
+</li>
+</ol>
+<p>Feito isto, o ISSU realizará a detecção de todos os componentes do computador. Esta etapa pode demorar até 1min.<br>
+<img src="https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-1.png?token=GHSAT0AAAAAABSMJMTAHXOUJT33KEWX3YQYYRTVPNA" alt="enter image description here"></p>
+<h2 id="visualizar-e-exportar-os-resultados">Visualizar e exportar os resultados</h2>
+<ol start="3">
+<li>
+<p>Após a execução da etapa anterios, a janela do ISSU será atualizada e exibirá um resumo da informações do sistema.</p>
+<p><img src="https://raw.githubusercontent.com/webertsaturnino/tutoriais/307c72212d3c30b47092b023148a1f68d451d21e/acesso-config-sistemas/imagens/ssu-2.png?token=GHSAT0AAAAAABSMJMTBSMFEPP4MXDGWRDBSYRTVSJA" alt="enter image description here"></p>
+</li>
+<li>
+<p>No menu <em>dropdown</em> na parte superior esquerda  da janela do <em>ISSU</em> estará selecionada a opção <strong>Summary View</strong>; Clicando neste menu haverá outra opção <em><strong>Detailed View</strong></em>. Selecione-a para visualizar as configurações completas do computador.</p>
+<p><img src="https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-2-detail.png?token=GHSAT0AAAAAABSMJMTAZB7IFTSF2D56OVPYYRTVUWA" alt="enter image description here"></p>
+</li>
+<li>
+<p>Para gerar um relatório completo das informações obtidas pelo <strong>ISSU</strong>, clique no botão “<strong>Next&gt;</strong>”, localizado no canto inferir direito da tela.</p>
+</li>
+<li>
+<p>A seguir, clique no botão “<strong>Save</strong>”.</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-3.png?token=GHSAT0AAAAAABSMJMTBMQVDN4EBIRKZXHEKYRTVXNA" alt="enter image description here"></p>
+<ol start="6">
+<li>
+<p>Será aberta um diálogo padrão do Windows para salvar arquivos. Dê um nome ao arquivo que será gerado e escolha uma pasta de sua preferência. Por último clique em “Salvar”.</p>
+</li>
+<li>
+<p>Será salvo um arquivo de texto (<em>.txt</em>) contendo um relatório detalhado das informações da máquina.</p>
+</li>
+</ol>
+</div>
+</body>
+
+</html>
