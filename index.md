@@ -12,14 +12,14 @@ Para acesso às informações do sistema incluindo os componentes físicos, apli
 Feito isto, o ISSU realizará a detecção de todos os componentes do computador. Esta etapa pode demorar até 1min.  
 ![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-1.png?token=GHSAT0AAAAAABSMJMTAHXOUJT33KEWX3YQYYRTVPNA)
 
- ## Visualizar e exportar os resultados
+## Visualizar e exportar os resultados
 
 3) Após a execução da etapa anterios, a janela do ISSU será atualizada e exibirá um resumo da informações do sistema.
    
-      ![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/307c72212d3c30b47092b023148a1f68d451d21e/acesso-config-sistemas/imagens/ssu-2.png?token=GHSAT0AAAAAABSMJMTBSMFEPP4MXDGWRDBSYRTVSJA)  
+![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/307c72212d3c30b47092b023148a1f68d451d21e/acesso-config-sistemas/imagens/ssu-2.png?token=GHSAT0AAAAAABSMJMTBSMFEPP4MXDGWRDBSYRTVSJA)  
 4) No menu *dropdown* na parte superior esquerda  da janela do *ISSU* estará selecionada a opção **Summary View**; Clicando neste menu haverá outra opção ***Detailed View***. Selecione-a para visualizar as configurações completas do computador.
-   
-   ![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-2-detail.png?token=GHSAT0AAAAAABSMJMTAZB7IFTSF2D56OVPYYRTVUWA)
+
+![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-2-detail.png?token=GHSAT0AAAAAABSMJMTAZB7IFTSF2D56OVPYYRTVUWA)
    
 5) Para gerar um relatório completo das informações obtidas pelo **ISSU**, clique no botão "**Next>**", localizado no canto inferir direito da tela.
 
