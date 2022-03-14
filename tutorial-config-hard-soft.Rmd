@@ -1,0 +1,86 @@
+---
+title: "Convênio MAPA/UFSJ 2022 – Levantamento de demandas de infraestrutura"
+subtitle: "TUTORIAL: Acessando configurações detalhadas de hardware e software em desktops, notebooks/laptops e servidores"
+date: "Março/2022"
+author: "Webert Saturnino"
+email: "webert.saturnino@gmail.com"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: "vignette"
+    toc: true
+---
+
+## WINDOWS^®^ (Vista/7/8/10/11/Server) {#sistema-operacional-windows}
+
+Para acesso às informações do sistema incluindo os componentes físicos, aplicações e demais *software* utilizaremos a ferramenta ***Intel® System Support Utility (ISSU) for Windows***, que permite a geração de um relatório completo das configurações da máquina.
+
+### Baixando e executando o ISSU {#parte-12-baixar-o-issu-e-executar-a-análise}
+
+1)  Acesse o [link](https://github.com/webertsaturnino/tutoriais/raw/main/acesso-config-sistemas/apps/intel-ssu-windows.exe) e baixe o arquivo ***intel-ssu-windows.exe***;
+
+2)  Execute o arquivo baixado (***intel-ssu-windows.exe***). Caso surja um diálogo do sistema com a mensagem "Deseja permitir que este aplicativo faça alterações no seu dispositivo?", clique em "Sim". Será aberta a janela do ***ISSU***. Marque a caixa de seleção ***Everything*** e depois no botão "***Scan***".
+
+Feito isto, o ISSU realizará a detecção de todos os componentes do computador. Esta etapa pode demorar até 1min.
+
+<p align="center">
+![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-1.png?token=GHSAT0AAAAAABSMJMTAHXOUJT33KEWX3YQYYRTVPNA){width="500"}
+</p>
+
+### Visualizando e exportando os resultados para um documento de texto (.***txt***) {#parte-22-visualizar-e-exportar-os-resultados}
+
+3)  Após a execução da etapa anterios, a janela do ISSU será atualizada e exibirá um resumo da informações do sistema.
+
+<p align="center">
+![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/307c72212d3c30b47092b023148a1f68d451d21e/acesso-config-sistemas/imagens/ssu-2.png?token=GHSAT0AAAAAABSMJMTBSMFEPP4MXDGWRDBSYRTVSJA){width="500"}
+</p>
+
+4)  No menu *dropdown* na parte superior esquerda da janela do *ISSU* estará selecionada a opção **Summary View**; Clicando neste menu haverá outra opção ***Detailed View***. Selecione-a para visualizar as configurações completas do computador.
+
+<p align="center">
+![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-2-detail.png?token=GHSAT0AAAAAABSMJMTAZB7IFTSF2D56OVPYYRTVUWA){width="500"}
+</p>
+
+5)  Para gerar um relatório completo das informações obtidas pelo **ISSU**, clique no botão "**Next>**", localizado no canto inferir direito da tela.
+
+6)  A seguir, clique no botão "**Save**".
+
+<p align="center">
+![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-3.png?token=GHSAT0AAAAAABSMJMTBMQVDN4EBIRKZXHEKYRTVXNA){width="500"}
+</p>
+
+7.  Será aberta um diálogo padrão do Windows para salvar arquivos. Dê um nome ao arquivo que será salvo e escolha uma pasta de sua preferência. Por último clique em **"Salvar"**. Será gerado e salvo um arquivo de texto (*.txt*) contendo um relatório detalhado das informações da máquina.
+
+------------------------------------------------------------------------
+
+## LINUX (distros baseadas em Debian)
+
+Para acesso às informações do sistema incluindo os componentes físicos, aplicações e demais *software* em distribuições Linux baseadas em Debian, incluso o próprio Debian, Ubuntu, Linux Mint, Pop!OS entre diversos outros, sugerimos a utilização do pacote ***lshw*** (*list hardware*). Este pacote de fácil utilização e se encontra nos repositórios oficiais do Debian e do Ubuntu. Possui versões também nos repositórios de outros projetos como o Mandriva, RedHat e OpenSUSE. Descreverems a seguir as etapas para instalação e e execução do *lshw* via terminal nas distribuições baseadas em Debian.
+
+### Instalação e execução do pacote o ***lshw***:
+
+1)  Abra o terminal e execute:
+
+``` bash
+sudo apt-get install lshw
+```
+
+``` bash
+sudo lshw
+```
+
+### Exportando o relatório como as configurações da máquina
+
+\- HTML
+
+``` bash
+sudo lshw -html > /home/seu-usuario/configuracoes-sistema.html
+```
+
+``` bash
+sudo apt-get install lshw-gtk
+```
+
+``` bash
+sudo lshw -X
+```
