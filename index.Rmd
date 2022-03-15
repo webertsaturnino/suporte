@@ -1,6 +1,6 @@
 ---
-title: "Convênio MAPA/UFSJ 2022 – Levantamento de demandas de infraestrutura"
-subtitle: "TUTORIAL: Acessando configurações detalhadas de hardware e software em desktops, notebooks/laptops e servidores"
+title: "TUTORIAL"
+subtitle: "CONFIGURAÇÕES DETALHADAS DE HARDWARE E SOFTWARE EM SISTEMAS WINDOWS E LINUX"
 date: "Março/2022"
 author: "Webert Saturnino"
 email: "webert.saturnino@gmail.com"
@@ -10,6 +10,8 @@ output:
     highlight: "vignette"
     toc: true
 ---
+
+<!-- # Como as acessar as configurações detalhadas de hardware e software em desktops, notebooks/laptops e servidores no Windows® e em distros Linux baseadas em Debian -->
 
 ## WINDOWS^®^ (Vista/7/8/10/11/Server) {#sistema-operacional-windows}
 
@@ -23,32 +25,41 @@ Para acesso às informações do sistema incluindo os componentes físicos, apli
 
 Feito isto, o ISSU realizará a detecção de todos os componentes do computador. Esta etapa pode demorar até 1min.
 
-<p align="center">
-![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-1.png?token=GHSAT0AAAAAABSMJMTAHXOUJT33KEWX3YQYYRTVPNA){width="500"}
-</p>
-
+```{=html}
+<figure>
+  <img src="images/win-ssu-01.png" alt="Trulli" style="width:75%">
+  <figcaption>Fig. legenda.</figcaption>
+</figure>
+```
 ### Visualizando e exportando os resultados para um documento de texto (.***txt***) {#parte-22-visualizar-e-exportar-os-resultados}
 
 3)  Após a execução da etapa anterios, a janela do ISSU será atualizada e exibirá um resumo da informações do sistema.
 
-<p align="center">
-![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/307c72212d3c30b47092b023148a1f68d451d21e/acesso-config-sistemas/imagens/ssu-2.png?token=GHSAT0AAAAAABSMJMTBSMFEPP4MXDGWRDBSYRTVSJA){width="500"}
-</p>
-
+```{=html}
+<figure>
+  <img src="images/win-ssu-02.png" alt="Trulli" style="width:75%">
+  <figcaption>Fig. legenda.</figcaption>
+</figure>
+```
 4)  No menu *dropdown* na parte superior esquerda da janela do *ISSU* estará selecionada a opção **Summary View**; Clicando neste menu haverá outra opção ***Detailed View***. Selecione-a para visualizar as configurações completas do computador.
 
-<p align="center">
-![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-2-detail.png?token=GHSAT0AAAAAABSMJMTAZB7IFTSF2D56OVPYYRTVUWA){width="500"}
-</p>
+```{=html}
+<figure>
+  <img src="images/win-ssu-03.png" alt="Trulli" style="width:75%">
+  <figcaption>Fig. legenda.</figcaption>
+</figure>
+```
 
 5)  Para gerar um relatório completo das informações obtidas pelo **ISSU**, clique no botão "**Next>**", localizado no canto inferir direito da tela.
 
 6)  A seguir, clique no botão "**Save**".
 
-<p align="center">
-![enter image description here](https://raw.githubusercontent.com/webertsaturnino/tutoriais/main/acesso-config-sistemas/imagens/ssu-3.png?token=GHSAT0AAAAAABSMJMTBMQVDN4EBIRKZXHEKYRTVXNA){width="500"}
-</p>
-
+```{=html}
+<figure>
+  <img src="images/win-ssu-04.png" alt="Trulli" style="width:75%">
+  <figcaption>Fig. legenda.</figcaption>
+</figure>
+```
 7.  Será aberta um diálogo padrão do Windows para salvar arquivos. Dê um nome ao arquivo que será salvo e escolha uma pasta de sua preferência. Por último clique em **"Salvar"**. Será gerado e salvo um arquivo de texto (*.txt*) contendo um relatório detalhado das informações da máquina.
 
 ------------------------------------------------------------------------
@@ -59,23 +70,94 @@ Para acesso às informações do sistema incluindo os componentes físicos, apli
 
 ### Instalação e execução do pacote o ***lshw***:
 
-1)  Abra o terminal e execute:
+Abra o terminal e execute:
+
+1.  Para atualizar o índice de pacotes:
+
+``` bash
+sudo apt-get update
+```
+
+2.  Para instalar o lshw:
 
 ``` bash
 sudo apt-get install lshw
 ```
 
+3.  Para executar o lshw e visualizar as configurações:
+
 ``` bash
 sudo lshw
 ```
 
-### Exportando o relatório como as configurações da máquina
+<!-- img_begin![](images/lshw-console-saida.png){width="600"}img_end -->
 
-\- HTML
+```{=html}
+<pre class="wiki" style="color:SlateBlue;background-color:LightGray">dell
+
+    product: OptiPlex GXa 266L EM+
+    vendor: Dell Computer Corporation
+    serial: NL2SC
+    capabilities: smbios-2.2 dmi-2.2
+  *-core
+     *-firmware
+
+          description: BIOS
+          vendor: Dell Computer Corporation
+          version: A10 (06/23/00)
+          size: 64KB
+          capacity: 192KB
+          capabilities: isa pci pnp apm upgrade shadowing escd cdboot bootselect edd int13floppytoshiba int13floppy360 int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int9keyboard int14serial int17printer int10video
+     *-cpu
+          product: Pentium II (Klamath)
+          vendor: GenuineIntel
+          slot: Microprocessor
+          size: 266MHz
+          capacity: 333MHz
+          clock: 66MHz
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 sep mtrr pge mca cmov mmx
+        *-cache:0
+             description: Internal L1 Cache
+             size: 32KB
+             capacity: 32KB
+        *-cache:1
+             description: Pipeline burst Synchronous External L2 write-back Cache
+             size: 512KB
+             capacity: 512KB
+     *-memory
+          description: System Memory
+          slot: System board or motherboard
+          size: 192MB
+          capacity: 384MB
+        *-bank:0
+             description: DIMM DRAM Synchronous 64 bits
+             slot: DIMM_A
+             size: 64MB
+        *-bank:1
+             description: DIMM DRAM Synchronous 64 bits
+             slot: DIMM_B
+             size: 64MB
+        *-bank:2
+             description: DIMM DRAM Synchronous 64 bits
+             slot: DIMM_C
+             size: 64MB
+</pre>
+```
+### Exportando o relatório no formato *.html* como as configurações da máquina
 
 ``` bash
-sudo lshw -html > /home/seu-usuario/configuracoes-sistema.html
+sudo lshw -html > /home/seu-usuario/nome-do-arquivo.html
 ```
+
+```{=html}
+<a href="files/lshw-saida-configuracoes.html">
+<figure>
+  <img src="images/lshw-saida-html-print.png" alt="Trulli" style="width:75%">
+  <figcaption>Fig. legenda.</figcaption>
+</figure>
+</a>
+```
+A exportação no formato *.html* facilita a visualização e extração dos dados de interesse. No entanto é também possível exportação nos formatados de texto simples (*.txt*), XML (.xml) e JSON (.json), bastando substituir os parâmetros -html e a extensão .html
 
 ``` bash
 sudo apt-get install lshw-gtk
@@ -84,3 +166,5 @@ sudo apt-get install lshw-gtk
 ``` bash
 sudo lshw -X
 ```
+
+A instalação do pacote lshw pode ser realizada pela central/loja de aplicativos de todas as distribuições atuais Linux basedas em Debian.
