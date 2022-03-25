@@ -26,13 +26,15 @@ Para acesso às informações do sistema incluindo os componentes físicos, apli
 
 
 ```{=html}
-<a href="files/apps/intel-ssu-windows.zip">
+
 <figure>
-  <img src="images/download-circ.png" alt="Trulli" style="width:7% margin: 25px 0px 25px 200px"">
+  <a href="files/apps/intel-ssu-windows.zip">
+  <img src="images/download-circ.png" alt="Trulli" style="width:7% margin: 25px 0px 25px 200px">
   <figcaption>Baixar o ISSU</figcaption>
+  </a>
 </figure>
 
-</a>
+
 ```
 
 
