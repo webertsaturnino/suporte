@@ -25,7 +25,7 @@ Para acesso às informações do sistema incluindo os componentes físicos, apli
 ```{=html}
 <figure>
   <a href="files/apps/intel-ssu-windows.zip">
-  <img src="images/download.png">
+  <img src="images/ssu.png" style="width:15%">
   <figcaption style="font-size: small">Baixar Intel® SSU</figcaption>
   </a>
 </figure>
