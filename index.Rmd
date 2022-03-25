@@ -6,45 +6,40 @@ author: "Webert Saturnino"
 email: "webert.saturnino@gmail.com"
 output:
   prettydoc::html_pretty:
-    theme: cayman
+    theme: architect
     highlight: "vignette"
     toc: true
 ---
 
-```{=html}
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-```
 
 ## WINDOWS^®^ (Vista/7/8/10/11/Server) {#sistema-operacional-windows}
 
-Para acesso às informações do sistema incluindo os componentes físicos, aplicações e demais *software* utilizaremos a ferramenta ***Intel® System Support Utility (ISSU) for Windows***, que permite a geração de um relatório completo das configurações da máquina.
+Para acesso às informações do sistema incluindo os componentes físicos, aplicações e demais *software* recomendamos a ferramenta ***Intel® System Support Utility (ISSU) for Windows***, que permite a geração de um relatório completo das configurações da máquina.
 
-### Baixando e executando o ISSU {#parte-12-baixar-o-issu-e-executar-a-análise}
+### Baixando e executando o *ISSU* {#parte-12-baixar-o-issu-e-executar-a-análise}
 
 1)  Clique no botão abaixo e **salve** o arquivo ***intel-ssu-windows.zip*** no computador a ser analisado;
 
 
 ```{=html}
-
 <figure>
   <a href="files/apps/intel-ssu-windows.zip">
-  <img src="images/download-circ.png" alt="Trulli" style="width:7% margin: 25px 0px 25px 200px">
-  <figcaption>Baixar o ISSU</figcaption>
+  <img src="images/download.png">
+  <figcaption style="font-size: small">Baixar Intel® SSU</figcaption>
   </a>
 </figure>
-
-
 ```
 
+2)  **Extraia** o arquivo ***intel-ssu-windows.zip*** para uma pasta de sua preferência***;***
 
-2)  **Extraia** o arquivo ***intel-ssu-windows.zip;***
+3)  **Navegue até a pasta da extração e execute** o arquivo ***intel-ssu-windows.exe***. Será aberta a janela do ***ISSU***.
 
-3)  **Navegue até a pasta da extração e execute** o arquivo ***intel-ssu-windows.exe***. Caso apareça uma mensagem do sistema "Deseja permitir que este aplicativo faça alterações no seu dispositivo?", clique em "Sim". Será aberta a janela do ***ISSU***.
+> *Caso nesta etapa apareça uma mensagem do sistema "Deseja permitir que este aplicativo faça alterações no seu dispositivo?", clique em "Sim".*
 
-4)  Na janela inicial do ISSU, marque a caixa de seleção ***Everything*** e depois no botão "***Scan***".
+4)  Na janela inicial do ISSU, marque a caixa de seleção "***Everything***" e depois no botão "***Scan***".
 
-Feito isto, o ISSU realizará a detecção de todos os componentes do computador. Esta etapa pode demorar até 1min.
+O *ISSU* realizará a detecção de todos os componentes do computador. Esta etapa pode demorar até 1min.
 
 ```{=html}
 <figure>
@@ -54,7 +49,7 @@ Feito isto, o ISSU realizará a detecção de todos os componentes do computador
 ```
 ### Visualizando e exportando os resultados para um documento de texto (.***txt***) {#parte-22-visualizar-e-exportar-os-resultados}
 
-3)  Após a execução da etapa anterios, a janela do ISSU será atualizada e exibirá um resumo da informações do sistema.
+5)  Após a execução da etapa anterios, a janela do ISSU será atualizada e exibirá um resumo da informações do sistema.
 
 ```{=html}
 <figure>
@@ -62,7 +57,7 @@ Feito isto, o ISSU realizará a detecção de todos os componentes do computador
   <figcaption></figcaption>
 </figure>
 ```
-4)  No menu *dropdown* na parte superior esquerda da janela do *ISSU* estará selecionada a opção **Summary View**; Clicando neste menu haverá outra opção ***Detailed View***. Selecione-a para visualizar as configurações completas do computador.
+6)  No menu *dropdown* na parte superior esquerda da janela do *ISSU* estará selecionada a opção **Summary View**; Clicando neste menu haverá outra opção ***Detailed View***. Selecione-a para visualizar as configurações completas do computador.
 
 ```{=html}
 <figure>
@@ -70,9 +65,9 @@ Feito isto, o ISSU realizará a detecção de todos os componentes do computador
   <figcaption></figcaption>
 </figure>
 ```
-5)  Para gerar um relatório completo das informações obtidas pelo **ISSU**, clique no botão "**Next>**", localizado no canto inferir direito da tela.
+7)  Para gerar um relatório completo das informações obtidas pelo **ISSU**, clique no botão "**Next>**", localizado no canto inferir direito da tela.
 
-6)  A seguir, clique no botão "**Save**".
+8)  A seguir, clique no botão "**Save**".
 
 ```{=html}
 <figure>
@@ -80,16 +75,13 @@ Feito isto, o ISSU realizará a detecção de todos os componentes do computador
   <figcaption></figcaption>
 </figure>
 ```
-7.  Será aberta um diálogo padrão do Windows para salvar arquivos. Dê um nome ao arquivo que será salvo e escolha uma pasta de sua preferência. Por último clique em **"Salvar"**. Será gerado e salvo um arquivo de texto (*.txt*) contendo um relatório detalhado das informações da máquina.
+9)  Será aberta um diálogo padrão do Windows para salvar arquivos. Dê um nome ao arquivo que será salvo e escolha uma pasta de sua preferência. Por último clique em **"Salvar"**. Será gerado e salvo um arquivo de texto (*.txt*) contendo um relatório detalhado das informações da máquina.
 
-```{=html}
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-```
 
 ## LINUX (distros baseadas em Debian)
 
-Para acesso às informações do sistema incluindo os componentes físicos, aplicações e demais *software* em distribuições Linux baseadas em Debian, incluso o próprio Debian, Ubuntu, Linux Mint, Pop!OS entre diversos outros, sugerimos a utilização do pacote ***lshw*** (*list hardware*). Este pacote de fácil utilização e se encontra nos repositórios oficiais do Debian e do Ubuntu. Possui versões também nos repositórios de outros projetos como o Mandriva, RedHat e OpenSUSE. Descreverems a seguir as etapas para instalação e e execução do *lshw* via terminal nas distribuições baseadas em Debian.
+> Para acesso às informações do sistema incluindo os componentes físicos, aplicações e demais *software* em distribuições Linux baseadas em Debian, incluso o próprio Debian, Ubuntu, Linux Mint, Pop!OS entre diversos outros, sugerimos a utilização do pacote ***lshw*** (*list hardware*). Este pacote de fácil utilização e se encontra nos repositórios oficiais do Debian e do Ubuntu. Possui versões também nos repositórios de outros projetos como o Mandriva, RedHat e OpenSUSE. Descreverems a seguir as etapas para instalação e e execução do *lshw* via terminal nas distribuições baseadas em Debian.
 
 ### Instalação e execução do pacote o ***lshw*** pelo terminal:
 
@@ -183,7 +175,7 @@ sudo lshw -html > /home/seu-usuario/nome-do-arquivo.html
 </figure>
 </a>
 ```
-A exportação no formato *.html* facilita a visualização e extração dos dados de interesse. No entanto é também possível exportação nos formatados de texto simples (*.txt*), XML (.xml) e JSON (.json), bastando substituir os parâmetros -html e a extensão .html
+> A exportação no formato *.html* facilita a visualização e extração dos dados de interesse. No entanto é também possível exportação nos formatados de texto simples (*.txt*), XML (.xml) e JSON (.json), bastando substituir os parâmetros -html e a extensão .html
 
 ### Instalação e execução do pacote o ***lshw*** pela interface gráfica:
 
@@ -193,7 +185,6 @@ Uma interface gráfica de usuário (GUI) está disponível para o pacote ***lshw
 sudo apt-get install lshw-gtk
 sudo lshw -X
 ```
-
 
 ```{=html}
 <style>
@@ -223,7 +214,4 @@ sudo lshw -X
   </div>
 </div>
 ```
-
-
-
 Alternativamente, instalação do pacote ***lshw-gtk*** pode ser realizada pela central/loja de aplicativos de todas as distribuições atuais Linux basedas em Debian. Após a instalação basta buscar "lshw" no menu de aplicações da distribuição.
