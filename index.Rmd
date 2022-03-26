@@ -1,15 +1,17 @@
 ---
-title: "TUTORIAL"
-subtitle: "CONFIGURAÇÕES DETALHADAS DE HARDWARE E SOFTWARE EM SISTEMAS WINDOWS E LINUX"
-date: "Março/2022"
-author: "Webert Saturnino"
-email: "webert.saturnino@gmail.com"
+title: "TUTORIAL 01 - INFORMAÇÕES DE HARDWARE E SOFTWARE"
+subtitle: "**Como obter informações detalhadas de hardware e software em sistemas WINDOWS e LINUX**"
+date: "`r Sys.Date()`"
 output:
   prettydoc::html_pretty:
     theme: architect
-    highlight: "vignette"
-    toc: true
+    highlight: vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
+
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
@@ -20,7 +22,6 @@ Para acesso às informações do sistema incluindo os componentes físicos, apli
 ### Baixando e executando o *ISSU* {#parte-12-baixar-o-issu-e-executar-a-análise}
 
 1)  Clique no botão abaixo e **salve** o arquivo ***intel-ssu-windows.zip*** no computador a ser analisado;
-
 
 ```{=html}
 <figure>
@@ -171,7 +172,7 @@ sudo lshw -html > /home/seu-usuario/nome-do-arquivo.html
 <a href="files/lshw-saida-configuracoes-k55a.html">
 <figure>
   <img src="images/lshw-saida-html-print.png" alt="Trulli" style="width:80%">
-  <figcaption>Clique na figura para ampliar</figcaption>
+  <figcaption style="font-size: small">Clique na figura para visualizar a versão completa do relatório completo</figcaption>
 </figure>
 </a>
 ```
